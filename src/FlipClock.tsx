@@ -4,6 +4,8 @@ import { useCheckMobile, useFlipClockTime, useShuffleState } from "./hooks";
 import { defaultProps } from "./constants";
 import { FlipUnitContainer } from "./components";
 
+const HOURS_IN_CIRCLE = 12;
+
 const FlipClock = (props: FlipClockProps) => {
   const {
     width,
@@ -27,11 +29,15 @@ const FlipClock = (props: FlipClockProps) => {
     colonColor,
     borderColor,
     shadowColor,
+    showAmPm = false,
   } = { ...defaultProps, ...props };
   
   const { hours, minutes, seconds } = useFlipClockTime();
   const { hoursShuffle, minutesShuffle, secondsShuffle } = useShuffleState(hours, minutes, seconds);
   const { isMobile } = useCheckMobile();
+
+  const amPm = hours >= HOURS_IN_CIRCLE ? 'PM' : 'AM';
+  const displayHours = showAmPm ? (hours % HOURS_IN_CIRCLE || HOURS_IN_CIRCLE) : hours;
 
   const clockStyle = {
     "--flip-clock-width": width,
@@ -60,7 +66,7 @@ const FlipClock = (props: FlipClockProps) => {
 
   return (
     <div className={"flipClock"} style={clockStyle}>
-      <FlipUnitContainer unit={"hours"} digit={hours} shuffle={hoursShuffle} />
+      <FlipUnitContainer unit={"hours"} digit={displayHours} shuffle={hoursShuffle} />
       <div className="colon" />
       <FlipUnitContainer
         unit={"minutes"}
@@ -76,6 +82,11 @@ const FlipClock = (props: FlipClockProps) => {
             shuffle={secondsShuffle}
           />
         </>
+      )}
+      {showAmPm && (
+        <div className="am-pm-suffix">
+          {amPm}
+        </div>
       )}
     </div>
   );

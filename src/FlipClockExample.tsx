@@ -148,6 +148,22 @@ const FlipClockExample = () => {
         unitHeight="55px"
         digitFontSize="1.3em"
       />
+
+      <h2>With AM/PM Display</h2>
+      <FlipClock
+        width="350px"
+        height="80px"
+        backgroundColor="#1a1a2e"
+        cardBackgroundColor="#16213e"
+        digitColor="#0f3460"
+        colonColor="#e94560"
+        borderColor="#0f3460"
+        shadowColor="rgba(233, 69, 96, 0.3)"
+        unitWidth="60px"
+        unitHeight="65px"
+        digitFontSize="1.5em"
+        showAmPm={true}
+      />
     </div>
   );
 };

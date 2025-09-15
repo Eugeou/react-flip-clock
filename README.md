@@ -7,6 +7,7 @@ A beautiful and customizable React flip clock component with TypeScript support.
 ## Features
 
 - **Highly Customizable**: Customize colors, sizes, fonts, and more
+- **12/24 Hour Format**: Optional AM/PM display with automatic hour conversion
 - **Responsive**: Automatically hides seconds on mobile devices
 - **TypeScript Support**: Full TypeScript definitions included
 - **Smooth Animations**: Beautiful flip animations with CSS transitions
@@ -93,6 +94,38 @@ function ThemedClock() {
 }
 ```
 
+### AM/PM Display (12-Hour Format)
+
+```tsx
+import React from 'react';
+import { FlipClock } from 'react-flip-clock-lib';
+
+function ClockWithAmPm() {
+  return (
+    <FlipClock
+      width="350px"
+      height="80px"
+      backgroundColor="#1a1a2e"
+      cardBackgroundColor="#16213e"
+      digitColor="#0f3460"
+      colonColor="#e94560"
+      borderColor="#0f3460"
+      shadowColor="rgba(233, 69, 96, 0.3)"
+      unitWidth="60px"
+      unitHeight="65px"
+      digitFontSize="1.5em"
+      showAmPm={true}  // Enable AM/PM display
+    />
+  );
+}
+```
+
+**Note:** When `showAmPm` is enabled:
+- Hours automatically convert from 24-hour to 12-hour format
+- AM/PM suffix appears after the time
+- Hours 0-11 display as 12-11 AM
+- Hours 12-23 display as 12-11 PM
+
 ### Using Hooks for Custom Logic
 
 ```tsx
@@ -139,6 +172,7 @@ function CustomClockLogic() {
 | `colonColor` | `string` | `"#333"` | Colon color |
 | `borderColor` | `string` | `"#333"` | Border color |
 | `shadowColor` | `string` | `"rgba(0, 0, 0, 0.3)"` | Shadow color |
+| `showAmPm` | `boolean` | `false` | Show AM/PM suffix (12-hour format) |
 
 ### Hooks
 
@@ -266,6 +300,13 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 Created by [Eugeou](https://github.com/Eugeou)
 
 ## Changelog
+
+### 1.1.0
+- ✨ **NEW**: Added AM/PM display support with `showAmPm` prop
+- ✨ **NEW**: 12-hour format with automatic hour conversion
+- 🎨 **NEW**: Beautiful AM/PM suffix styling
+- 📚 **NEW**: Updated documentation with AM/PM examples
+- 🐛 **FIX**: Improved CSS import handling
 
 ### 1.0.0
 - Initial release

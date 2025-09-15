@@ -216,3 +216,28 @@ header h1 {
     transform: rotateX(0deg);
   }
 }
+
+/* AM/PM Suffix Styles */
+.am-pm-suffix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  padding: 4px 8px;
+  background-color: var(--flip-clock-card-background-color, #2c3e50);
+  color: var(--flip-clock-digit-color, #ecf0f1);
+  border-radius: var(--flip-clock-unit-border-radius, 4px);
+  font-size: calc(var(--flip-clock-digit-font-size, 24px) * 0.6);
+  font-family: var(--flip-clock-font-family, 'Arial', sans-serif);
+  font-weight: bold;
+  min-width: 32px;
+  height: calc(var(--flip-clock-unit-height, 60px) * 0.6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--flip-clock-border-color, #34495e);
+  transition: all 0.3s ease;
+}
+
+.am-pm-suffix:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}

@@ -15,6 +15,7 @@ export default [
         file: packageJson.main,
         format: 'cjs',
         sourcemap: true,
+        exports: 'named',
       },
       {
         file: packageJson.module,
@@ -25,18 +26,20 @@ export default [
     plugins: [
       resolve({
         browser: true,
+        preferBuiltins: false,
       }),
       commonjs(),
       typescript({
         tsconfig: './tsconfig.json',
         exclude: ['**/*.test.*', '**/*.spec.*'],
+        jsx: 'react-jsx',
       }),
       postcss({
         extract: true,
         minimize: true,
       }),
     ],
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom', 'react/jsx-runtime'],
   },
   {
     input: 'dist/index.d.ts',
