@@ -2,7 +2,7 @@ import "./flip-clock.css";
 import { FlipClockProps } from "./types";
 import { useCheckMobile, useFlipClockTime, useShuffleState } from "./hooks";
 import { defaultProps } from "./constants";
-import { FlipUnitContainer } from "./components";
+import { FlipUnitContainer, AmPmSuffix } from "./components";
 
 const HOURS_IN_CIRCLE = 12;
 
@@ -65,29 +65,29 @@ const FlipClock = (props: FlipClockProps) => {
   } as React.CSSProperties;
 
   return (
-    <div className={"flipClock"} style={clockStyle}>
-      <FlipUnitContainer unit={"hours"} digit={displayHours} shuffle={hoursShuffle} />
-      <div className="colon" />
-      <FlipUnitContainer
-        unit={"minutes"}
-        digit={minutes}
-        shuffle={minutesShuffle}
-      />
-      {!isMobile && (
-        <>
-          <div className="colon" />
-          <FlipUnitContainer
-            unit={"seconds"}
-            digit={seconds}
-            shuffle={secondsShuffle}
-          />
-        </>
-      )}
-      {showAmPm && (
-        <div className="am-pm-suffix">
-          {amPm}
-        </div>
-      )}
+    <div className="flipClock" style={clockStyle}>
+      <div className="time-units">
+        <FlipUnitContainer unit={"hours"} digit={displayHours} shuffle={hoursShuffle} />
+        <div className="colon" />
+        <FlipUnitContainer
+          unit={"minutes"}
+          digit={minutes}
+          shuffle={minutesShuffle}
+        />
+        {!isMobile && (
+          <>
+            <div className="colon" />
+            <FlipUnitContainer
+              unit={"seconds"}
+              digit={seconds}
+              shuffle={secondsShuffle}
+            />
+          </>
+        )}
+        {showAmPm && (
+          <AmPmSuffix value={amPm} />
+        )}
+      </div>
     </div>
   );
 };

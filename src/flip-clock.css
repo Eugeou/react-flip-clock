@@ -34,7 +34,8 @@ header h1 {
 
 .flipClock {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: var(--flip-clock-width, 200px);
   height: var(--flip-clock-height, 60px);
   padding: var(--flip-clock-padding, 8px);
@@ -43,6 +44,13 @@ header h1 {
   opacity: var(--flip-clock-opacity, 1);
   box-shadow: 0 4px 20px var(--flip-clock-shadow-color, rgba(0, 0, 0, 0.1));
   position: relative;
+}
+
+.time-units {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .flipClock::after {
@@ -218,26 +226,14 @@ header h1 {
 }
 
 /* AM/PM Suffix Styles */
-.am-pm-suffix {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 8px;
-  padding: 4px 8px;
-  background-color: var(--flip-clock-card-background-color, #2c3e50);
-  color: var(--flip-clock-digit-color, #ecf0f1);
-  border-radius: var(--flip-clock-unit-border-radius, 4px);
-  font-size: calc(var(--flip-clock-digit-font-size, 24px) * 0.6);
-  font-family: var(--flip-clock-font-family, 'Arial', sans-serif);
-  font-weight: bold;
-  min-width: 32px;
-  height: calc(var(--flip-clock-unit-height, 60px) * 0.6);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--flip-clock-border-color, #34495e);
-  transition: all 0.3s ease;
+.am-pm-container {
+  width: calc(var(--flip-clock-unit-width, 40px) * 0.4) !important;
+  height: calc(var(--flip-clock-unit-height, 44px) * 0.4) !important;
+  margin: 0 var(--flip-clock-unit-margin, 4px);
+  flex-shrink: 0;
 }
 
-.am-pm-suffix:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+.am-pm-container .upperCard span,
+.am-pm-container .lowerCard span {
+  font-size: calc(var(--flip-clock-digit-font-size, 1em) * 0.4) !important;
 }

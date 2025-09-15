@@ -1,4 +1,5 @@
 // Main entry point for the react-flip-clock-lib package
+import './flip-clock.css';
 export { default as FlipClock } from './FlipClock';
 export type { FlipClockProps } from './types';
 export { defaultProps } from './constants';

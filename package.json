@@ -1,6 +1,6 @@
 {
   "name": "react-flip-clock-lib",
-  "version": "1.1.2",
+  "version": "1.2.2",
   "type": "module",
   "description": "A beautiful and customizable React flip clock component with TypeScript support",
   "main": "dist/index.js",

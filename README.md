@@ -7,7 +7,7 @@ A beautiful and customizable React flip clock component with TypeScript support.
 ## Features
 
 - **Highly Customizable**: Customize colors, sizes, fonts, and more
-- **12/24 Hour Format**: Optional AM/PM display with automatic hour conversion
+- **12/24 Hour Format**: Optional AM/PM display with automatic hour conversion and matching flip card styling
 - **Responsive**: Automatically hides seconds on mobile devices
 - **TypeScript Support**: Full TypeScript definitions included
 - **Smooth Animations**: Beautiful flip animations with CSS transitions
@@ -30,7 +30,8 @@ yarn add react-flip-clock-lib
 
 ```tsx
 import React from 'react';
-import { FlipClock } from 'react-flip-clock-lib';
+import { FlipClock } from "react-flip-clock-lib";
+import "react-flip-clock-lib/dist/index.css";
 
 function App() {
   return (
@@ -49,7 +50,8 @@ export default App;
 
 ```tsx
 import React from 'react';
-import { FlipClock } from 'react-flip-clock-lib';
+import { FlipClock } from "react-flip-clock-lib";
+import "react-flip-clock-lib/dist/index.css";
 
 function CustomClock() {
   return (
@@ -73,7 +75,8 @@ function CustomClock() {
 
 ```tsx
 import React from 'react';
-import { FlipClock } from 'react-flip-clock-lib';
+import { FlipClock } from "react-flip-clock-lib";
+import "react-flip-clock-lib/dist/index.css";
 
 function ThemedClock() {
   return (
@@ -98,7 +101,8 @@ function ThemedClock() {
 
 ```tsx
 import React from 'react';
-import { FlipClock } from 'react-flip-clock-lib';
+import { FlipClock } from "react-flip-clock-lib";
+import "react-flip-clock-lib/dist/index.css";
 
 function ClockWithAmPm() {
   return (
@@ -122,7 +126,8 @@ function ClockWithAmPm() {
 
 **Note:** When `showAmPm` is enabled:
 - Hours automatically convert from 24-hour to 12-hour format
-- AM/PM suffix appears after the time
+- AM/PM suffix appears as a smaller flip card with matching styling
+- AM/PM suffix is 40% the size of time cards and positioned inline
 - Hours 0-11 display as 12-11 AM
 - Hours 12-23 display as 12-11 PM
 
@@ -300,6 +305,13 @@ MIT License - see the [LICENSE](LICENSE) file for details.
 Created by [Eugeou](https://github.com/Eugeou)
 
 ## Changelog
+
+### 1.2.2
+- 🎨 **IMPROVED**: AM/PM suffix now uses matching flip card styling
+- 📏 **IMPROVED**: AM/PM suffix is 40% the size of time cards for better proportion
+- 🎯 **IMPROVED**: AM/PM suffix positioned inline with time cards
+- 🧹 **CLEANUP**: Simplified AM/PM implementation and removed complex positioning
+- 🐛 **FIX**: Better CSS integration and styling consistency
 
 ### 1.1.0
 - ✨ **NEW**: Added AM/PM display support with `showAmPm` prop
