@@ -1,6 +1,8 @@
 # React Flip Clock Library
 
-A beautiful and customizable React flip clock component with TypeScript support. This library provides a modern, animated flip clock that displays hours, minutes, and seconds with smooth flip animations.
+A beautiful and customizable React flip clock component with TypeScript support. This library provides a modern, animated flip clock that displays hours, minutes, and seconds with smooth flip animations. [Install here](https://www.npmjs.com/package/react-flip-clock-lib)
+
+<img width="1503" height="533" alt="image" src="https://github.com/user-attachments/assets/36650104-cc45-47cb-add1-1a86f0f965f8" />
 
 ## Features
 
