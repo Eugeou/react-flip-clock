@@ -2,7 +2,7 @@
 
 ## 📦 Package Overview
 
-**Name**: `react-flip-clock`  
+**Name**: `react-flip-clock-lib`  
 **Version**: 1.0.0  
 **Description**: A beautiful and customizable React flip clock component with TypeScript support
 
@@ -10,10 +10,10 @@
 
 ```bash
 # Install
-npm install react-flip-clock
+npm install react-flip-clock-lib
 
 # Use in your React app
-import { FlipClock } from 'react-flip-clock';
+import { FlipClock } from 'react-flip-cloc-lib';
 
 function App() {
   return <FlipClock />;
