@@ -306,14 +306,14 @@ Created by [Eugeou](https://github.com/Eugeou)
 
 ## Changelog
 
-### 1.2.2
+### 1.2.2 & 1.2.3 (Latest)
 - 🎨 **IMPROVED**: AM/PM suffix now uses matching flip card styling
 - 📏 **IMPROVED**: AM/PM suffix is 40% the size of time cards for better proportion
 - 🎯 **IMPROVED**: AM/PM suffix positioned inline with time cards
 - 🧹 **CLEANUP**: Simplified AM/PM implementation and removed complex positioning
 - 🐛 **FIX**: Better CSS integration and styling consistency
 
-### 1.1.0
+### 1.1.0 & 1.1.1 & 1.1.2
 - ✨ **NEW**: Added AM/PM display support with `showAmPm` prop
 - ✨ **NEW**: 12-hour format with automatic hour conversion
 - 🎨 **NEW**: Beautiful AM/PM suffix styling

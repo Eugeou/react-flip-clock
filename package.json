@@ -1,6 +1,6 @@
 {
   "name": "react-flip-clock-lib",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "type": "module",
   "description": "A beautiful and customizable React flip clock component with TypeScript support",
   "main": "dist/index.js",
@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eugeous/react-flip-clock.git"
+    "url": "https://github.com/Eugeou/react-flip-clock.git"
   },
   "bugs": {
-    "url": "https://github.com/eugeous/react-flip-clock/issues"
+    "url": "https://github.com/Eugeou/react-flip-clock/issues"
   },
-  "homepage": "https://github.com/eugeous/react-flip-clock#readme",
+  "homepage": "https://github.com/Eugeou/react-flip-clock#readme",
   "dependencies": {
     "tslib": "^2.8.1"
   }

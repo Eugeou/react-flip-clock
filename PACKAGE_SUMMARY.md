@@ -154,6 +154,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 👨‍💻 Author
 
-Created by [Eugeous](https://github.com/eugeous)
+Created by [Eugeou](https://github.com/Eugeou)
 
 ---
